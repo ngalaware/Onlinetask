@@ -19,9 +19,15 @@ public class OnlineTask {
 
     private boolean isDebuggingModeActive = false;
 
-    public OnlineTask ()
+    public OnlineTask (Activity activity, String url, String requestType, boolean isDebuggingModeActive)
     {
-
+        this.activity = activity;
+        this.url = url;
+        this.requestType= requestType;
+        this.isNeedPostEncodeValue = false;
+        this.postEncodeValue = null;
+        this.postEncodeType = 1;
+        this.isDebuggingModeActive = isDebuggingModeActive;
     }
     public OnlineTask (Activity activity, String url, String requestType,boolean isNeedPostEncodeValue, HashMap postEncodeValue, int postEncodeType, boolean isDebuggingModeActive)
     {
